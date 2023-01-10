@@ -11,13 +11,13 @@ class BannerList {
     if (json['data'] != null) {
       data = <BannerData>[];
       json['data'].forEach((v) {
-        data!.add(new BannerData.fromJson(v));
+        data!.add(BannerData.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['status'] = this.status;
     data['message'] = this.message;
     if (this.data != null) {
@@ -50,7 +50,7 @@ class BannerData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = Map<String, dynamic>();
     data['event_id'] = this.eventId;
     data['event_title'] = this.eventTitle;
     data['event_description'] = this.eventDescription;
